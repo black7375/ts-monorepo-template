@@ -1,5 +1,11 @@
 {
   "name": "ts-monorepo-template",
   "type": "module",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "package/*"
+    ]
+  },
   "packageManager": "yarn@3.2.0"
 }
