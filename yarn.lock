@@ -10,6 +10,7 @@ __metadata:
   resolution: "ts-monorepo-template@workspace:."
   dependencies:
     turbo: ^1.2.9
+    typescript: next
   languageName: unknown
   linkType: soft
 
@@ -151,5 +152,25 @@ __metadata:
   bin:
     turbo: bin/turbo
   checksum: 7f8bbe9ff37590e01a10f8e9859a99fb74def0c94f38d46844f3a29d7559ad95f9c85944085783f122d5ee2fff20f49e2d838d953343a45680a9089190eee2a3
+  languageName: node
+  linkType: hard
+
+"typescript@npm:next":
+  version: 4.8.0-dev.20220513
+  resolution: "typescript@npm:4.8.0-dev.20220513"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 747bb563ee24a3f521841ba16793f8be846c9aa060b641bf200f52bc37e9f66db75539c99ce6877bf4d636063ac2b6d23d91b51ce402c6a00afb9ff4aac6a779
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@next#~builtin<compat/typescript>":
+  version: 4.8.0-dev.20220513
+  resolution: "typescript@patch:typescript@npm%3A4.8.0-dev.20220513#~builtin<compat/typescript>::version=4.8.0-dev.20220513&hash=bda367"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 8915163cc6ae6fa9089cb5e93b5500128160abb447bb4b25b439018ce45a4307c3d0d0326e28d14b942b5407c1e8549a11974020f681344983e0112e04556f62
   languageName: node
   linkType: hard
