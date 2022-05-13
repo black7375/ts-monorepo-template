@@ -2,6 +2,10 @@
   "name": "ts-monorepo-template",
   "type": "module",
   "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --no-cache --parallel --continue"
+  },
   "workspaces": {
     "packages": [
       "package/*"
