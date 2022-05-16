@@ -11,3 +11,6 @@ yarn add -D turbo
 # https://dev.to/mxro/the-ultimate-guide-to-typescript-monorepos-5ap7
 yarn add -D typescript@next
 yarn run tsc --init
+
+# Lint & Format
+yarn add -D prettier
