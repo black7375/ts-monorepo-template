@@ -10,6 +10,7 @@ yarn add -D turbo
 # Typescript
 # https://dev.to/mxro/the-ultimate-guide-to-typescript-monorepos-5ap7
 yarn add -D typescript@next
+yarn plugin import typescript
 yarn run tsc --init
 
 # Lint & Format
