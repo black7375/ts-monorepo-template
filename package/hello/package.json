@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/package.json",
   "name": "hello",
   "type": "module",
   "main": "dist/index.cjs",
