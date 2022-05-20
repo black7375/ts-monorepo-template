@@ -13,6 +13,9 @@
     "lint": {
       "outputs": []
     },
+    "type-check": {
+      "dependsOn": ["^type-check"]
+    },
     "deploy": {
       "dependsOn": ["build", "test", "lint"],
       "outputs": []
