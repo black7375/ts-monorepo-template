@@ -14,7 +14,7 @@ yarn add -D vite
 
 # Typescript
 # https://dev.to/mxro/the-ultimate-guide-to-typescript-monorepos-5ap7
-yarn add -D typescript@next
+yarn add -D typescript@next @types/node
 yarn plugin import typescript
 yarn run tsc --init
 
