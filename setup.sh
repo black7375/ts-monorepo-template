@@ -8,9 +8,11 @@ yarn config set nodeLinker pnpm # pnp | pnpm | node-modules
 # Monorepo
 # https://turborepo.org/docs/getting-started#install-turbo
 yarn add -D turbo
+# yarn create turbo
 
 # Bundler
 yarn add -D vite
+# yarn create vite
 
 # Typescript
 # https://dev.to/mxro/the-ultimate-guide-to-typescript-monorepos-5ap7
