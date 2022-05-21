@@ -18,7 +18,7 @@ export default ({ command, mode }: typeof process.env) => defineConfig({
 // == Plugin ==================================================================
 function pluginOption(command: string, mode: string) {
   const options = new PluginBuilder();
-  if (command === "build") {
+  if (command === "build" && mode === "production") {
     options.add( dts() );
   }
   return options.build();
