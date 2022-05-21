@@ -1,11 +1,18 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "hello",
+  "version": "0.0.1",
   "type": "module",
   "typings": "index.d.ts",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
-  "version": "0.0.1",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
   "scripts": {
     "build": "yarn run -T vite build",
     "type-check": "yarn run -T tsc --noEmit",
