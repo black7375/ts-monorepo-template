@@ -25,4 +25,7 @@ yarn run tsc --init
 yarn add -D vite-plugin-dts # vite-dts not works
 
 # Lint & Format
-yarn add -D prettier
+yarn add -D eslint prettier
+yarn workspace eslint-config-custom add -D \
+  @typescript-eslint/parser @typescript-eslint/eslint-plugin
+yarn workspace eslint-config-custom add -P eslint
