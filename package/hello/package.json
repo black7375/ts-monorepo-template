@@ -9,6 +9,9 @@
   "scripts": {
     "build": "yarn run -T vite build",
     "type-check": "yarn run -T tsc --noEmit",
-    "lint": "yarn run -T eslint --ext .ts"
+    "lint": "yarn run -T eslint . './src/**/*.ts'"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:^"
   }
 }
