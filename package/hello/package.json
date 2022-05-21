@@ -2,6 +2,7 @@
   "$schema": "https://json.schemastore.org/package.json",
   "name": "hello",
   "type": "module",
+  "typings": "index.d.ts",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "version": "0.0.1",

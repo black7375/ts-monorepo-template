@@ -20,5 +20,7 @@ yarn add -D typescript @types/node
 yarn plugin import typescript
 yarn run tsc --init
 
+yarn add -D vite-plugin-dts # vite-dts not works
+
 # Lint & Format
 yarn add -D prettier
