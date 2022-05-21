@@ -17,9 +17,11 @@ yarn add -D vite
 # Typescript
 # https://dev.to/mxro/the-ultimate-guide-to-typescript-monorepos-5ap7
 yarn add -D typescript @types/node
+yarn add tslib
 yarn plugin import typescript
 yarn run tsc --init
 
+# Plugins
 yarn add -D vite-plugin-dts # vite-dts not works
 
 # Lint & Format
