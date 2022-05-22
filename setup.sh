@@ -29,3 +29,6 @@ yarn add -D eslint prettier
 yarn workspace eslint-config-custom add -D \
   @typescript-eslint/parser @typescript-eslint/eslint-plugin
 yarn workspace eslint-config-custom add -P eslint
+
+# Others
+yarn add -D rimraf
