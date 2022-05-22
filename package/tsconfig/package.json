@@ -4,6 +4,6 @@
   "private": true,
   "files": [
     "tsconfig.json",
-    "tsconfig.release.json"
+    "tsconfig.node.json"
   ]
 }

@@ -12,13 +12,16 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "yarn run -T vite build",
     "type-check": "yarn run -T tsc --noEmit",
     "lint": "yarn run -T eslint ."
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:^"
+    "eslint-config-custom": "workspace:^",
+    "tsconfig": "workspace:^"
   }
 }
