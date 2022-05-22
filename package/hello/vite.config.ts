@@ -58,6 +58,11 @@ function userOption() {
   return configs.build();
 }
 
+interface IObject {
+  [key: string]: any;
+  length?: never;
+}
+
 class UserConfigBuilder {
   private readonly _configs: UserConfig;
 
@@ -69,7 +74,7 @@ class UserConfigBuilder {
     return !!obj && typeof obj === 'object'
   }
 
-  private merge(target: UserConfig, source: UserConfig) {
+  private merge(target: IObject, source: IObject) {
     if (!this.isObject(target) || !this.isObject(source)) {
       return source;
     }

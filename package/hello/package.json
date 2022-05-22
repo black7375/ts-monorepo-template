@@ -18,8 +18,8 @@
   "scripts": {
     "clean": "yarn run -T rimraf dist .turbo tsconfig.tsbuildinfo node_modules/.vite",
     "build": "yarn run -T vite build",
-    "type-check": "yarn run -T tsc --noEmit",
-    "lint": "yarn run -T eslint ."
+    "lint": "yarn run -T eslint .",
+    "check": "yarn run -T tsc --noEmit"
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:^",
