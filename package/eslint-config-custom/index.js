@@ -1,4 +1,5 @@
 module.exports = {
+  $schema: "https://json.schemastore.org/eslintrc.json",
   parser: "@typescript-eslint/parser",
   plugins: [
     "@typescript-eslint",
