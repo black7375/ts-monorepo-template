@@ -22,6 +22,9 @@
     "build": "yarn run -T vite build --mode=development",
     "build:release": "yarn run -T vite build",
     "build:watch": "yarn run build --watch",
+    "test": "yarn run -T vitest run",
+    "test:watch": "yarn run -T vitest",
+    "coverage": "yarn run test --coverage",
     "lint": "yarn run -T esprint .",
     "fix": "yarn run lint --fix",
     "check": "yarn run -T tsc --noEmit"

@@ -13,7 +13,11 @@
     },
     "test": {
       "dependsOn": ["build"],
-      "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx"]
+      "inputs": ["src/**/*.tsx", "src/**/*.ts", "__test__/**/*.ts", "__test__/**/*.tsx"]
+    },
+    "coverage": {
+      "dependsOn": ["build"],
+      "inputs": ["src/**/*.tsx", "src/**/*.ts", "__test__/**/*.ts", "__test__/**/*.tsx"]
     },
     "lint": {
     },

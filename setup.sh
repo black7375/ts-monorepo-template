@@ -26,6 +26,7 @@ yarn add -D vite-plugin-dts # vite-dts not works
 
 # Lint & Format
 yarn add -D eslint \
+            esprint \
             prettier \
             @typescript-eslint/eslint-plugin \
             eslint-plugin-prettier
@@ -33,6 +34,9 @@ yarn workspace eslint-config-custom add -D \
   @typescript-eslint/parser \
   eslint-config-prettier
 yarn workspace eslint-config-custom add -P eslint
+
+# Test
+yarn add -D vitest c8
 
 # Others
 yarn add -D rimraf
