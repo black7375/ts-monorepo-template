@@ -15,6 +15,7 @@
   "files": [
     "dist"
   ],
+  "prettier": "prettier-config-custom",
   "scripts": {
     "clean": "yarn run -T rimraf dist .turbo tsconfig.tsbuildinfo node_modules/.vite",
     "start": "node ./dist/index.mjs",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:^",
+    "prettier-config-custom": "workspace:^",
     "tsconfig": "workspace:^"
   }
 }

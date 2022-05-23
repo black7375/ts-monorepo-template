@@ -1664,6 +1664,7 @@ __metadata:
   resolution: "hello@workspace:package/hello"
   dependencies:
     eslint-config-custom: "workspace:^"
+    prettier-config-custom: "workspace:^"
     tsconfig: "workspace:^"
   languageName: unknown
   linkType: soft
@@ -2407,6 +2408,12 @@ __metadata:
   checksum: cd192ec0d0a8e4c6da3bb80e4f62afe336df3f76271ac6deb0e6a36187133b6073a19e9727a1ff108cd8b9982e4768850d413baa71214dd80c7979617dca827a
   languageName: node
   linkType: hard
+
+"prettier-config-custom@workspace:^, prettier-config-custom@workspace:package/prettier-config-custom":
+  version: 0.0.0-use.local
+  resolution: "prettier-config-custom@workspace:package/prettier-config-custom"
+  languageName: unknown
+  linkType: soft
 
 "prettier-linter-helpers@npm:^1.0.0":
   version: 1.0.0

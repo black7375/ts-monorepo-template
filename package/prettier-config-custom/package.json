@@ -1,0 +1,9 @@
+{
+  "name": "prettier-config-custom",
+  "version": "0.0.0",
+  "private": true,
+  "main": ".prettierrc",
+  "files": [
+    ".prettierrc"
+  ]
+}
