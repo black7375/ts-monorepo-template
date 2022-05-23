@@ -17,9 +17,12 @@
   ],
   "scripts": {
     "clean": "yarn run -T rimraf dist .turbo tsconfig.tsbuildinfo node_modules/.vite",
-    "build": "yarn run -T vite build",
-    "lint": "yarn run -T eslint .",
-    "fix": "yarn run -T eslint . --fix",
+    "start": "node ./dist/index.mjs",
+    "build": "yarn run -T vite build --mode=development",
+    "build:release": "yarn run -T vite build",
+    "build:watch": "yarn run build --watch",
+    "lint": "yarn run -T esprint .",
+    "fix": "yarn run lint --fix",
     "check": "yarn run -T tsc --noEmit"
   },
   "devDependencies": {
