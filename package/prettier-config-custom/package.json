@@ -2,8 +2,8 @@
   "name": "prettier-config-custom",
   "version": "0.0.0",
   "private": true,
-  "main": ".prettierrc",
+  "main": "prettier.config.cjs",
   "files": [
-    ".prettierrc"
+    "prettier.config.cjs"
   ]
 }
