@@ -1,10 +1,12 @@
 import { resolve } from "path";
-import { defineConfig, ConfigEnv, UserConfig, PluginOption } from "vite";
+import { ConfigEnv, UserConfig, PluginOption } from "vite";
+import { defineConfig } from "vitest/config";
 import dts from "vite-plugin-dts";
 
 // == Vite Config =============================================================
 // https://vitejs.dev/config/#build-lib
 export default ({ command, mode }: ConfigEnv) => {
+  console.log("command: " + command + " mode: " + mode);
   Build.set(command, mode);
   return defineConfig({
     ...userOption(),
@@ -25,6 +27,9 @@ class Build {
   }
   public static isProd() {
     return Build.COMMAND === "build" && Build.MODE === "production";
+  }
+  public static isTest() {
+    return Build.COMMAND === "serve" && Build.MODE === "test";
   }
 }
 
@@ -52,6 +57,19 @@ function userOption() {
       build: {
         sourcemap: false,
         minify: "terser"
+      }
+    });
+  }
+  if (Build.isTest()) {
+    configs.add({
+      test: {
+        includeSource: ["src/**/*.ts"]
+      }
+    });
+  } else {
+    configs.add({
+      define: {
+        "import.meta.vitest": "undefined"
       }
     });
   }
