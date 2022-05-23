@@ -1,6 +1,6 @@
 import { resolve } from "path";
 import { defineConfig, ConfigEnv, UserConfig, PluginOption } from "vite";
-import dts from 'vite-plugin-dts';
+import dts from "vite-plugin-dts";
 
 // == Vite Config =============================================================
 // https://vitejs.dev/config/#build-lib
@@ -21,10 +21,10 @@ class Build {
     Build.MODE = mode;
   }
   public static isDev() {
-    return (Build.COMMAND === "build" && Build.MODE === "development");
+    return Build.COMMAND === "build" && Build.MODE === "development";
   }
   public static isProd() {
-    return (Build.COMMAND === "build" && Build.MODE === "production");
+    return Build.COMMAND === "build" && Build.MODE === "production";
   }
 }
 
@@ -35,7 +35,7 @@ function userOption() {
       lib: {
         entry: resolve(__dirname, "src/index.ts"),
         formats: ["es", "cjs"],
-        fileName: (format) => (format === "es") ? "index.mjs" : "index.cjs"
+        fileName: format => (format === "es" ? "index.mjs" : "index.cjs")
       }
     }
   });
@@ -59,6 +59,7 @@ function userOption() {
 }
 
 interface IObject {
+  // eslint-disable-next-line
   [key: string]: any;
   length?: never;
 }
@@ -71,29 +72,27 @@ class UserConfigBuilder {
   }
 
   private isObject(obj: UserConfig[keyof UserConfig]) {
-    return !!obj && typeof obj === 'object'
+    return !!obj && typeof obj === "object";
   }
 
   private merge(target: IObject, source: IObject) {
     if (!this.isObject(target) || !this.isObject(source)) {
       return source;
     }
-  
+
     Object.keys(source).forEach(key => {
       const targetValue = target[key];
       const sourceValue = source[key];
-  
+
       if (Array.isArray(targetValue) && Array.isArray(sourceValue)) {
         target[key] = targetValue.concat(sourceValue);
-      }
-      else if (this.isObject(targetValue) && this.isObject(sourceValue)) {
+      } else if (this.isObject(targetValue) && this.isObject(sourceValue)) {
         target[key] = this.merge(Object.assign({}, targetValue), sourceValue);
-      }
-      else {
+      } else {
         target[key] = sourceValue;
       }
     });
-  
+
     return target;
   }
 
@@ -111,7 +110,7 @@ class UserConfigBuilder {
 function pluginOption() {
   const options = new PluginBuilder();
   if (Build.isProd()) {
-    options.add( dts() );
+    options.add(dts());
   }
   return options.build();
 }
@@ -124,7 +123,7 @@ class PluginBuilder {
   }
 
   add(...plugins: PluginOption[]) {
-    plugins.forEach(plugin => this._plugins.push( plugin ));
+    plugins.forEach(plugin => this._plugins.push(plugin));
     return this;
   }
 

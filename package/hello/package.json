@@ -19,6 +19,7 @@
     "clean": "yarn run -T rimraf dist .turbo tsconfig.tsbuildinfo node_modules/.vite",
     "build": "yarn run -T vite build",
     "lint": "yarn run -T eslint .",
+    "fix": "yarn run -T eslint . --fix",
     "check": "yarn run -T tsc --noEmit"
   },
   "devDependencies": {
