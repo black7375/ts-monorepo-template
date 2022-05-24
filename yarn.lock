@@ -1822,7 +1822,7 @@ __metadata:
   dependencies:
     eslint-config-custom: "workspace:^"
     prettier-config-custom: "workspace:^"
-    tsconfig: "workspace:^"
+    tsconfig-custom: "workspace:^"
   languageName: unknown
   linkType: soft
 
@@ -3223,9 +3223,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsconfig@workspace:^, tsconfig@workspace:configs/tsconfig":
+"tsconfig-custom@workspace:^, tsconfig-custom@workspace:configs/tsconfig-custom":
   version: 0.0.0-use.local
-  resolution: "tsconfig@workspace:configs/tsconfig"
+  resolution: "tsconfig-custom@workspace:configs/tsconfig-custom"
   languageName: unknown
   linkType: soft
 

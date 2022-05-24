@@ -32,6 +32,6 @@
   "devDependencies": {
     "eslint-config-custom": "workspace:^",
     "prettier-config-custom": "workspace:^",
-    "tsconfig": "workspace:^"
+    "tsconfig-custom": "workspace:^"
   }
 }
