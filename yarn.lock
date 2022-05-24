@@ -1269,9 +1269,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-custom@workspace:^, eslint-config-custom@workspace:package/eslint-config-custom":
+"eslint-config-custom@workspace:^, eslint-config-custom@workspace:configs/eslint-config-custom":
   version: 0.0.0-use.local
-  resolution: "eslint-config-custom@workspace:package/eslint-config-custom"
+  resolution: "eslint-config-custom@workspace:configs/eslint-config-custom"
   dependencies:
     "@typescript-eslint/parser": ^5.25.0
   peerDependencies:
@@ -2667,9 +2667,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-config-custom@workspace:^, prettier-config-custom@workspace:package/prettier-config-custom":
+"prettier-config-custom@workspace:^, prettier-config-custom@workspace:configs/prettier-config-custom":
   version: 0.0.0-use.local
-  resolution: "prettier-config-custom@workspace:package/prettier-config-custom"
+  resolution: "prettier-config-custom@workspace:configs/prettier-config-custom"
   languageName: unknown
   linkType: soft
 
@@ -3223,9 +3223,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsconfig@workspace:^, tsconfig@workspace:package/tsconfig":
+"tsconfig@workspace:^, tsconfig@workspace:configs/tsconfig":
   version: 0.0.0-use.local
-  resolution: "tsconfig@workspace:package/tsconfig"
+  resolution: "tsconfig@workspace:configs/tsconfig"
   languageName: unknown
   linkType: soft
 
