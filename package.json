@@ -6,12 +6,14 @@
   "scripts": {
     "clean": "turbo run clean",
     "build": "turbo run build",
-    "dev": "turbo run dev --no-cache --parallel --continue",
+    "build:relase": "turbo run build:relase",
     "lint": "turbo run lint",
     "fix": "turbo run fix",
     "check": "turbo run check",
     "test": "turbo run test",
-    "coverage": "turbo run coverage"
+    "test:all": "turbo run test:all",
+    "coverage": "turbo run coverage",
+    "coverage:all": "turbo run coverage:all"
   },
   "workspaces": {
     "packages": [

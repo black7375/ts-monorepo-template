@@ -17,7 +17,7 @@
   ],
   "prettier": "prettier-config-custom",
   "scripts": {
-    "clean": "yarn run -T rimraf dist .turbo tsconfig.tsbuildinfo node_modules/.vite",
+    "clean": "yarn run -T rimraf dist coverage .turbo tsconfig.tsbuildinfo node_modules/.vite",
     "start": "node ./dist/index.mjs",
     "build": "yarn run -T vite build --mode=development",
     "build:release": "yarn run -T vite build",
