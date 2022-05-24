@@ -34,6 +34,7 @@ yarn workspace eslint-config-custom add -D \
   @typescript-eslint/parser \
   eslint-config-prettier
 yarn workspace eslint-config-custom add -P eslint
+# yarn run -T eslint --init
 
 # Test
 yarn add -D vitest c8

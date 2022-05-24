@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from "vitest";
 import { printNum, add } from "../src/index";
 
- // integrated test suites
+// integrated test suites
 describe("Add num prints", () => {
   it.concurrent("One num", () => {
     console.log = vi.fn();
