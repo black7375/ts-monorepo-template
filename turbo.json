@@ -15,12 +15,22 @@
       "inputs": ["src/**/*.ts", "vite.config.ts"],
       "outputs": ["dist/**"]
     },
+    "lint": {
+    },
+    "fix": {
+    },
+    "check": {
+      "outputs": ["tsconfig.tsbuildinfo"]
+    },
+    "check:all": {
+      "dependsOn": ["lint", "check"]
+    },
     "test": {
       "dependsOn": ["^build"],
       "inputs": ["src/**/*.ts", "__test__/**/*.ts", "vite.config.ts"]
     },
     "test:all": {
-      "dependsOn": ["build", "test", "lint", "check"]
+      "dependsOn": ["build", "test", "check:all"]
     },
     "coverage": {
       "dependsOn": ["^build"],
@@ -28,14 +38,7 @@
       "outputs": ["coverage/**"]
     },
     "coverage:all": {
-      "dependsOn": ["build", "coverage", "lint", "check"]
-    },
-    "lint": {
-    },
-    "fix": {
-    },
-    "check": {
-      "outputs": ["tsconfig.tsbuildinfo"]
+      "dependsOn": ["build", "coverage", "check:all"]
     }
   }
 }

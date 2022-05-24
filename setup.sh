@@ -39,5 +39,11 @@ yarn workspace eslint-config-custom add -P eslint
 # Test
 yarn add -D vitest c8
 
+# hook
+# https://typicode.github.io/husky/
+yarn add -D husky
+yarn husky install configs/husky
+yarn husky add configs/husky/pre-commit "yarn check:all"
+
 # Others
 yarn add -D rimraf
