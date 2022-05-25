@@ -1823,6 +1823,7 @@ __metadata:
     eslint-config-custom: "workspace:^"
     prettier-config-custom: "workspace:^"
     tsconfig-custom: "workspace:^"
+    vite-config-builder: "workspace:^"
   languageName: unknown
   linkType: soft
 
@@ -3536,6 +3537,16 @@ __metadata:
   checksum: 2b83283de1222ca549a7ef57f46e8d49c6669213348db78b7045bce36a3b5843ff1e9f709ebf74574e06223461ee1f264f8cc9a26a0060a79a27de079d8286ef
   languageName: node
   linkType: hard
+
+"vite-config-builder@workspace:^, vite-config-builder@workspace:configs/vite-config-builder":
+  version: 0.0.0-use.local
+  resolution: "vite-config-builder@workspace:configs/vite-config-builder"
+  dependencies:
+    eslint-config-custom: "workspace:^"
+    prettier-config-custom: "workspace:^"
+    tsconfig-custom: "workspace:^"
+  languageName: unknown
+  linkType: soft
 
 "vite-plugin-dts@npm:^1.1.1":
   version: 1.1.1
