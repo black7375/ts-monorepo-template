@@ -25,7 +25,7 @@
     "test": "yarn run -T vitest run",
     "test:watch": "yarn run -T vitest",
     "coverage": "yarn run test --coverage",
-    "lint": "yarn run -T esprint .",
+    "lint": "yarn run -T esprint check .",
     "fix": "yarn run lint --fix",
     "check": "yarn run -T tsc --noEmit"
   },
