@@ -1,0 +1,19 @@
+{
+  "name": "vite-config-custom",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "typings": "dist/index.d.ts",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.25.0"
+  },
+  "peerDependencies": {
+    "vite": "*",
+    "vitest": "*"
+  },
+  "dependencies": {
+    "vite-config-builder": "workspace:^"
+  }
+}

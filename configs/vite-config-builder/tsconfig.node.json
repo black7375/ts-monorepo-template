@@ -1,4 +1,10 @@
 {
   "extends": "tsconfig-custom/tsconfig.node.json",
-  "include": ["vite.config.ts", "src/**.ts"]
+  "include": ["vite.config.ts", "src/**.ts"],
+  "compilerOptions": {
+    "types": [                                           /* Specify type package names to be included without being referenced in a source file. */
+      "vitest/importMeta",
+      "vitest/globals"
+    ]
+  }
 }

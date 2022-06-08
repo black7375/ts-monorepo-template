@@ -1,8 +1,8 @@
 import { resolve } from "path";
 import { ConfigEnv } from "vite";
 import { defineConfig } from "vitest/config";
-import dts from "vite-plugin-dts";
-import { Build, UserConfigBuilder, PluginBuilder } from "vite-config-builder";
+
+import { UserConfigBuilder, UserPluginBuilder } from "vite-config-custom";
 
 // == Vite Config =============================================================
 // https://vitejs.dev/config/#build-lib
@@ -17,15 +17,6 @@ export default (viteConfigEnv: ConfigEnv) => {
         }
       }
     }).build(),
-    plugins: pluginOption().build()
+    plugins: UserPluginBuilder().build()
   });
 };
-
-// == Plugin ==================================================================
-function pluginOption() {
-  const options = new PluginBuilder();
-  if (Build.isProd()) {
-    options.add(dts());
-  }
-  return options;
-}

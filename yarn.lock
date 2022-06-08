@@ -840,6 +840,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clone-deep@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "clone-deep@npm:4.0.1"
+  dependencies:
+    is-plain-object: ^2.0.4
+    kind-of: ^6.0.2
+    shallow-clone: ^3.0.0
+  checksum: 770f912fe4e6f21873c8e8fbb1e99134db3b93da32df271d00589ea4a29dbe83a9808a322c93f3bcaf8584b8b4fa6fc269fc8032efbaa6728e0c9886c74467d2
+  languageName: node
+  linkType: hard
+
 "code-block-writer@npm:^11.0.0":
   version: 11.0.0
   resolution: "code-block-writer@npm:11.0.0"
@@ -1824,6 +1835,7 @@ __metadata:
     prettier-config-custom: "workspace:^"
     tsconfig-custom: "workspace:^"
     vite-config-builder: "workspace:^"
+    vite-config-custom: "workspace:^"
   languageName: unknown
   linkType: soft
 
@@ -2011,6 +2023,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-plain-object@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "is-plain-object@npm:2.0.4"
+  dependencies:
+    isobject: ^3.0.1
+  checksum: 2a401140cfd86cabe25214956ae2cfee6fbd8186809555cd0e84574f88de7b17abacb2e477a6a658fa54c6083ecbda1e6ae404c7720244cd198903848fca70ca
+  languageName: node
+  linkType: hard
+
 "is-stream@npm:^2.0.0":
   version: 2.0.1
   resolution: "is-stream@npm:2.0.1"
@@ -2022,6 +2043,13 @@ __metadata:
   version: 2.0.0
   resolution: "isexe@npm:2.0.0"
   checksum: 26bf6c5480dda5161c820c5b5c751ae1e766c587b1f951ea3fcfc973bafb7831ae5b54a31a69bd670220e42e99ec154475025a468eae58ea262f813fdc8d1c62
+  languageName: node
+  linkType: hard
+
+"isobject@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "isobject@npm:3.0.1"
+  checksum: db85c4c970ce30693676487cca0e61da2ca34e8d4967c2e1309143ff910c207133a969f9e4ddb2dc6aba670aabce4e0e307146c310350b298e74a31f7d464703
   languageName: node
   linkType: hard
 
@@ -2166,6 +2194,13 @@ __metadata:
   version: 1.3.1
   resolution: "jsonparse@npm:1.3.1"
   checksum: 6514a7be4674ebf407afca0eda3ba284b69b07f9958a8d3113ef1005f7ec610860c312be067e450c569aab8b89635e332cee3696789c750692bb60daba627f4d
+  languageName: node
+  linkType: hard
+
+"kind-of@npm:^6.0.2":
+  version: 6.0.3
+  resolution: "kind-of@npm:6.0.3"
+  checksum: 3ab01e7b1d440b22fe4c31f23d8d38b4d9b91d9f291df683476576493d5dfd2e03848a8b05813dd0c3f0e835bc63f433007ddeceb71f05cb25c45ae1b19c6d3b
   languageName: node
   linkType: hard
 
@@ -2960,6 +2995,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"shallow-clone@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "shallow-clone@npm:3.0.1"
+  dependencies:
+    kind-of: ^6.0.2
+  checksum: 39b3dd9630a774aba288a680e7d2901f5c0eae7b8387fc5c8ea559918b29b3da144b7bdb990d7ccd9e11be05508ac9e459ce51d01fd65e583282f6ffafcba2e7
+  languageName: node
+  linkType: hard
+
 "shebang-command@npm:^2.0.0":
   version: 2.0.0
   resolution: "shebang-command@npm:2.0.0"
@@ -3199,6 +3243,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ts-adt@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "ts-adt@npm:2.1.2"
+  checksum: c137cba73b215aa9c2d152fcceb0c25ee11dc718847ffec6297e2371c08b881e5ff59a0d200cb1f197941385e3827846477aafaac501cad80006a088404c51f0
+  languageName: node
+  linkType: hard
+
 "ts-monorepo-template@workspace:.":
   version: 0.0.0-use.local
   resolution: "ts-monorepo-template@workspace:."
@@ -3233,6 +3284,18 @@ __metadata:
   checksum: e975fb245ae558c638e94014dcbbad828b904dee5a7309bfb4ef2b2922d0d7ad902ec00874a959be58991043ce655f78ae78df0d0e0d6fb3800b991b95be08ce
   languageName: node
   linkType: hard
+
+"ts-static@workspace:package/ts-static":
+  version: 0.0.0-use.local
+  resolution: "ts-static@workspace:package/ts-static"
+  dependencies:
+    eslint-config-custom: "workspace:^"
+    prettier-config-custom: "workspace:^"
+    ts-adt: ^2.1.2
+    tsconfig-custom: "workspace:^"
+    vite-config-builder: "workspace:^"
+  languageName: unknown
+  linkType: soft
 
 "tsconfig-custom@workspace:^, tsconfig-custom@workspace:configs/tsconfig-custom":
   version: 0.0.0-use.local
@@ -3545,6 +3608,20 @@ __metadata:
     eslint-config-custom: "workspace:^"
     prettier-config-custom: "workspace:^"
     tsconfig-custom: "workspace:^"
+    vite-config-custom: "workspace:^"
+    webpack-merge: ^5.8.0
+  languageName: unknown
+  linkType: soft
+
+"vite-config-custom@workspace:^, vite-config-custom@workspace:configs/vite-config-custom":
+  version: 0.0.0-use.local
+  resolution: "vite-config-custom@workspace:configs/vite-config-custom"
+  dependencies:
+    "@typescript-eslint/parser": ^5.25.0
+    vite-config-builder: "workspace:^"
+  peerDependencies:
+    vite: "*"
+    vitest: "*"
   languageName: unknown
   linkType: soft
 
@@ -3635,6 +3712,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"webpack-merge@npm:^5.8.0":
+  version: 5.8.0
+  resolution: "webpack-merge@npm:5.8.0"
+  dependencies:
+    clone-deep: ^4.0.1
+    wildcard: ^2.0.0
+  checksum: 88786ab91013f1bd2a683834ff381be81c245a4b0f63304a5103e90f6653f44dab496a0768287f8531761f8ad957d1f9f3ccb2cb55df0de1bd9ee343e079da26
+  languageName: node
+  linkType: hard
+
 "which@npm:^2.0.1, which@npm:^2.0.2":
   version: 2.0.2
   resolution: "which@npm:2.0.2"
@@ -3652,6 +3739,13 @@ __metadata:
   dependencies:
     string-width: ^1.0.2 || 2 || 3 || 4
   checksum: d5fc37cd561f9daee3c80e03b92ed3e84d80dde3365a8767263d03dacfc8fa06b065ffe1df00d8c2a09f731482fcacae745abfbb478d4af36d0a891fad4834d3
+  languageName: node
+  linkType: hard
+
+"wildcard@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "wildcard@npm:2.0.0"
+  checksum: 1f4fe4c03dfc492777c60f795bbba597ac78794f1b650d68f398fbee9adb765367c516ebd4220889b6a81e9626e7228bbe0d66237abb311573c2ee1f4902a5ad
   languageName: node
   linkType: hard
 
