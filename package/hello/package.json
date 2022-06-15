@@ -34,8 +34,5 @@
     "prettier-config-custom": "workspace:^",
     "tsconfig-custom": "workspace:^",
     "vite-config-custom": "workspace:^"
-  },
-  "dependencies": {
-    "vite-config-builder": "workspace:^"
   }
 }

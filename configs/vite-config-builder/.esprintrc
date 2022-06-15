@@ -1,5 +1,0 @@
-{
-  "paths": ["src/**.ts", "vite.config.ts"],
-  "ignored": ["dist/**", "node_modules/**", "coverage/**"],
-  "port": 5004
-}

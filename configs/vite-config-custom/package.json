@@ -7,13 +7,11 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "@typescript-eslint/parser": "^5.25.0"
+    "@typescript-eslint/parser": "^5.25.0",
+    "vite-config-builder": "^0.0.1"
   },
   "peerDependencies": {
     "vite": "*",
     "vitest": "*"
-  },
-  "dependencies": {
-    "vite-config-builder": "workspace:^"
   }
 }

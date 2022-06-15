@@ -1592,6 +1592,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"find-up@npm:^6.1.0":
+  version: 6.3.0
+  resolution: "find-up@npm:6.3.0"
+  dependencies:
+    locate-path: ^7.1.0
+    path-exists: ^5.0.0
+  checksum: 9a21b7f9244a420e54c6df95b4f6fc3941efd3c3e5476f8274eb452f6a85706e7a6a90de71353ee4f091fcb4593271a6f92810a324ec542650398f928783c280
+  languageName: node
+  linkType: hard
+
 "flat-cache@npm:^3.0.4":
   version: 3.0.4
   resolution: "flat-cache@npm:3.0.4"
@@ -1834,7 +1844,6 @@ __metadata:
     eslint-config-custom: "workspace:^"
     prettier-config-custom: "workspace:^"
     tsconfig-custom: "workspace:^"
-    vite-config-builder: "workspace:^"
     vite-config-custom: "workspace:^"
   languageName: unknown
   linkType: soft
@@ -2230,6 +2239,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"locate-path@npm:^7.1.0":
+  version: 7.1.1
+  resolution: "locate-path@npm:7.1.1"
+  dependencies:
+    p-locate: ^6.0.0
+  checksum: 1d88af5b512d6e6398026252e17382907126683ab09ae5d6b8918d0bc72ca2642e1ad6e2fe635c5920840e369618e5d748c08deb57ba537fdd3f78e87ca993e0
+  languageName: node
+  linkType: hard
+
 "lodash.get@npm:^4.4.2":
   version: 4.4.2
   resolution: "lodash.get@npm:4.4.2"
@@ -2604,12 +2622,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"p-limit@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "p-limit@npm:4.0.0"
+  dependencies:
+    yocto-queue: ^1.0.0
+  checksum: 01d9d70695187788f984226e16c903475ec6a947ee7b21948d6f597bed788e3112cc7ec2e171c1d37125057a5f45f3da21d8653e04a3a793589e12e9e80e756b
+  languageName: node
+  linkType: hard
+
 "p-locate@npm:^5.0.0":
   version: 5.0.0
   resolution: "p-locate@npm:5.0.0"
   dependencies:
     p-limit: ^3.0.2
   checksum: 1623088f36cf1cbca58e9b61c4e62bf0c60a07af5ae1ca99a720837356b5b6c5ba3eb1b2127e47a06865fee59dd0453cad7cc844cda9d5a62ac1a5a51b7c86d3
+  languageName: node
+  linkType: hard
+
+"p-locate@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "p-locate@npm:6.0.0"
+  dependencies:
+    p-limit: ^4.0.0
+  checksum: 2bfe5234efa5e7a4e74b30a5479a193fdd9236f8f6b4d2f3f69e3d286d9a7d7ab0c118a2a50142efcf4e41625def635bd9332d6cbf9cc65d85eb0718c579ab38
   languageName: node
   linkType: hard
 
@@ -2642,6 +2678,13 @@ __metadata:
   version: 4.0.0
   resolution: "path-exists@npm:4.0.0"
   checksum: 505807199dfb7c50737b057dd8d351b82c033029ab94cb10a657609e00c1bc53b951cfdbccab8de04c5584d5eff31128ce6afd3db79281874a5ef2adbba55ed1
+  languageName: node
+  linkType: hard
+
+"path-exists@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "path-exists@npm:5.0.0"
+  checksum: 8ca842868cab09423994596eb2c5ec2a971c17d1a3cb36dbf060592c730c725cd524b9067d7d2a1e031fef9ba7bd2ac6dc5ec9fb92aa693265f7be3987045254
   languageName: node
   linkType: hard
 
@@ -2691,6 +2734,15 @@ __metadata:
   version: 2.3.1
   resolution: "picomatch@npm:2.3.1"
   checksum: 050c865ce81119c4822c45d3c84f1ced46f93a0126febae20737bd05ca20589c564d6e9226977df859ed5e03dc73f02584a2b0faad36e896936238238b0446cf
+  languageName: node
+  linkType: hard
+
+"pkg-dir@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "pkg-dir@npm:6.0.1"
+  dependencies:
+    find-up: ^6.1.0
+  checksum: ba1497053786fdc79fb525bd44ebb7cb17f6997f28a246bf542181f58d43d443832a027e2de677e8a3e3ae59f2d44eb2c738d033874a5a9c215d91c52ff8817c
   languageName: node
   linkType: hard
 
@@ -3243,13 +3295,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-adt@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "ts-adt@npm:2.1.2"
-  checksum: c137cba73b215aa9c2d152fcceb0c25ee11dc718847ffec6297e2371c08b881e5ff59a0d200cb1f197941385e3827846477aafaac501cad80006a088404c51f0
-  languageName: node
-  linkType: hard
-
 "ts-monorepo-template@workspace:.":
   version: 0.0.0-use.local
   resolution: "ts-monorepo-template@workspace:."
@@ -3284,18 +3329,6 @@ __metadata:
   checksum: e975fb245ae558c638e94014dcbbad828b904dee5a7309bfb4ef2b2922d0d7ad902ec00874a959be58991043ce655f78ae78df0d0e0d6fb3800b991b95be08ce
   languageName: node
   linkType: hard
-
-"ts-static@workspace:package/ts-static":
-  version: 0.0.0-use.local
-  resolution: "ts-static@workspace:package/ts-static"
-  dependencies:
-    eslint-config-custom: "workspace:^"
-    prettier-config-custom: "workspace:^"
-    ts-adt: ^2.1.2
-    tsconfig-custom: "workspace:^"
-    vite-config-builder: "workspace:^"
-  languageName: unknown
-  linkType: soft
 
 "tsconfig-custom@workspace:^, tsconfig-custom@workspace:configs/tsconfig-custom":
   version: 0.0.0-use.local
@@ -3601,24 +3634,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-config-builder@workspace:^, vite-config-builder@workspace:configs/vite-config-builder":
-  version: 0.0.0-use.local
-  resolution: "vite-config-builder@workspace:configs/vite-config-builder"
+"vite-config-builder@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "vite-config-builder@npm:0.0.1"
   dependencies:
-    eslint-config-custom: "workspace:^"
-    prettier-config-custom: "workspace:^"
-    tsconfig-custom: "workspace:^"
-    vite-config-custom: "workspace:^"
+    pkg-dir: ^6.0.1
+    tslib: ^2.4.0
     webpack-merge: ^5.8.0
-  languageName: unknown
-  linkType: soft
+  checksum: d4078d81feabffe68212788398062bf2dd7d2c62d206caa3bb37fb8f77a0afacb933d5c56644b7462318237ddd59554b1803c958b8b16323d5b9088a320d65a6
+  languageName: node
+  linkType: hard
 
 "vite-config-custom@workspace:^, vite-config-custom@workspace:configs/vite-config-custom":
   version: 0.0.0-use.local
   resolution: "vite-config-custom@workspace:configs/vite-config-custom"
   dependencies:
     "@typescript-eslint/parser": ^5.25.0
-    vite-config-builder: "workspace:^"
+    vite-config-builder: ^0.0.1
   peerDependencies:
     vite: "*"
     vitest: "*"
@@ -3851,6 +3883,13 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: f77b3d8d00310def622123df93d4ee654fc6a0096182af8bd60679ddcdfb3474c56c6c7190817c84a2785648cdee9d721c0154eb45698c62176c322fb46fc700
+  languageName: node
+  linkType: hard
+
+"yocto-queue@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "yocto-queue@npm:1.0.0"
+  checksum: 2cac84540f65c64ccc1683c267edce396b26b1e931aa429660aefac8fbe0188167b7aee815a3c22fa59a28a58d898d1a2b1825048f834d8d629f4c2a5d443801
   languageName: node
   linkType: hard
 
