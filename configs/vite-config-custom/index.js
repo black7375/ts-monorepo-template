@@ -1,3 +1,4 @@
+import { resolve } from "path";
 import { initConfigBuilder, ViteEnv, PluginBuilder } from "vite-config-builder";
 
 import dts from "vite-plugin-dts";
@@ -7,6 +8,16 @@ import incremental from "@mprt/rollup-plugin-incremental";
 // == Config ==================================================================
 export function UserConfigBuilder(viteConfigEnv, initConfigs) {
   const configs = initConfigBuilder(viteConfigEnv, initConfigs);
+  configs.add({
+    build: {
+      lib: {
+        entry: resolve(process.cwd(), "src/index.ts"),
+        formats: ["es", "cjs"],
+        fileName: format => (format === "es" ? "index.mjs" : "index.cjs")
+      }
+    },
+    plugins: UserPluginBuilder().build()
+  });
 
   if (ViteEnv.isDev()) {
     configs.add({
