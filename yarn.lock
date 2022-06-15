@@ -1867,9 +1867,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hello@workspace:package/hello":
+"hello@workspace:packages/hello":
   version: 0.0.0-use.local
-  resolution: "hello@workspace:package/hello"
+  resolution: "hello@workspace:packages/hello"
   dependencies:
     eslint-config-custom: "workspace:^"
     prettier-config-custom: "workspace:^"

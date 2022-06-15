@@ -20,7 +20,7 @@
   "workspaces": {
     "packages": [
       "configs/*",
-      "package/*"
+      "packages/*"
     ]
   },
   "packageManager": "yarn@3.2.1",
