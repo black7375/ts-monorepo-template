@@ -1,4 +1,6 @@
-module.exports = {
+const { defineConfig } = require('eslint-define-config');
+
+module.exports = defineConfig({
   $schema: "https://json.schemastore.org/eslintrc.json",
   parser: "@typescript-eslint/parser",
   plugins: [
@@ -15,4 +17,4 @@ module.exports = {
     node: true
   },
   ignorePatterns: ["dist/**", "node_modules/**", "coverage/**"]
-};
+});

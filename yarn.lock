@@ -1301,6 +1301,7 @@ __metadata:
   resolution: "eslint-config-custom@workspace:configs/eslint-config-custom"
   dependencies:
     "@typescript-eslint/parser": ^5.25.0
+    eslint-define-config: ^1.5.1
   peerDependencies:
     eslint: "*"
   languageName: unknown
@@ -1314,6 +1315,13 @@ __metadata:
   bin:
     eslint-config-prettier: bin/cli.js
   checksum: 0d0f5c32e7a0ad91249467ce71ca92394ccd343178277d318baf32063b79ea90216f4c81d1065d60f96366fdc60f151d4d68ae7811a58bd37228b84c2083f893
+  languageName: node
+  linkType: hard
+
+"eslint-define-config@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "eslint-define-config@npm:1.5.1"
+  checksum: 3d0d735ae9841e770dcc0b213f7f608039a8beb63a1d072b14ee61f2a3f439947d771809166fd46ff7133e6e83d33dca7ea0f7147419a8cbc635509769bbb7d4
   languageName: node
   linkType: hard
 
