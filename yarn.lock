@@ -156,6 +156,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mprt/rollup-plugin-incremental@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@mprt/rollup-plugin-incremental@npm:0.1.0"
+  peerDependencies:
+    rollup: ^2.33.1
+  checksum: d8fc47845a4d347d7b670cc16817d29a223c5b99bc1bcda626d295905bd008516e9cb8f93dd2cf48a9ff5e57c9befa3c608f46b4038e1e1a586ae3709a21ddf3
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -3708,6 +3717,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vite-config-custom@workspace:configs/vite-config-custom"
   dependencies:
+    "@mprt/rollup-plugin-incremental": ^0.1.0
     "@typescript-eslint/parser": ^5.25.0
     vite-config-builder: ^0.0.1
     vite-plugin-dts: ^1.2.0

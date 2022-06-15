@@ -1,7 +1,8 @@
+import { initConfigBuilder, ViteEnv, PluginBuilder } from "vite-config-builder";
+
 import dts from "vite-plugin-dts";
 import tsconfigPaths from "vite-tsconfig-paths";
-
-import { initConfigBuilder, ViteEnv, PluginBuilder } from "vite-config-builder";
+import incremental from "@mprt/rollup-plugin-incremental";
 
 // == Config ==================================================================
 export function UserConfigBuilder(viteConfigEnv, initConfigs) {
@@ -11,7 +12,13 @@ export function UserConfigBuilder(viteConfigEnv, initConfigs) {
     configs.add({
       build: {
         sourcemap: true,
-        minify: false
+        minify: false,
+        rollupOptions: {
+          treeshake: false,
+          output: {
+            preserveModules: true,
+          }
+        }
       }
     });
   }
@@ -45,6 +52,9 @@ export function UserPluginBuilder() {
   const options = new PluginBuilder([
     tsconfigPaths()
   ]);
+  if (ViteEnv.isDev()) {
+    options.add(incremental())
+  }
   if (ViteEnv.isProd()) {
     options.add(dts());
   }

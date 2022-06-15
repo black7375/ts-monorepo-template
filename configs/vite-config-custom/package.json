@@ -7,6 +7,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@mprt/rollup-plugin-incremental": "^0.1.0",
     "@typescript-eslint/parser": "^5.25.0",
     "vite-config-builder": "^0.0.1",
     "vite-plugin-dts": "^1.2.0",
