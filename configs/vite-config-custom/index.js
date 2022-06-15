@@ -1,4 +1,5 @@
 import dts from "vite-plugin-dts";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 import { initConfigBuilder, ViteEnv, PluginBuilder } from "vite-config-builder";
 
@@ -41,7 +42,9 @@ export function UserConfigBuilder(viteConfigEnv, initConfigs) {
 
 // == Plugin ==================================================================
 export function UserPluginBuilder() {
-  const options = new PluginBuilder();
+  const options = new PluginBuilder([
+    tsconfigPaths()
+  ]);
   if (ViteEnv.isProd()) {
     options.add(dts());
   }
