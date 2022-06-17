@@ -9,6 +9,7 @@ import incremental from "@mprt/rollup-plugin-incremental";
 export function UserConfigBuilder(viteConfigEnv, initConfigs) {
   const configs = initConfigBuilder(viteConfigEnv, initConfigs);
   configs.add({
+    // https://vitejs.dev/config/#build-lib
     build: {
       lib: {
         entry: resolve(process.cwd(), "src/index.ts"),
