@@ -9,13 +9,14 @@ import incremental from "@mprt/rollup-plugin-incremental";
 export function UserConfigBuilder(viteConfigEnv, initConfigs) {
   const configs = initConfigBuilder(viteConfigEnv, initConfigs);
   configs.add({
-    // https://vitejs.dev/config/#build-lib
     build: {
+      // https://vitejs.dev/config/#build-lib
       lib: {
         entry: resolve(process.cwd(), "src/index.ts"),
         formats: ["es", "cjs"],
         fileName: format => (format === "es" ? "index.mjs" : "index.cjs")
-      }
+      },
+      target: [ "es2020" ]
     },
     plugins: UserPluginBuilder().build()
   });
