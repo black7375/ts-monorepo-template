@@ -5,6 +5,10 @@ yarn init -2 -w
 yarn config set nodeLinker pnpm # pnp | pnpm | node-modules
 # yarn config set pnpEnableEsmLoader true # if use pnp mode
 
+# Yarn package plugins
+yarn plugin import interactive-tools
+yarn plugin import https://mskelton.dev/yarn-outdated/v3
+
 # Monorepo
 # https://turborepo.org/docs/getting-started#install-turbo
 yarn add -D turbo
