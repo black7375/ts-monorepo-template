@@ -9,6 +9,7 @@
   "devDependencies": {
     "@mprt/rollup-plugin-incremental": "^0.1.0",
     "@typescript-eslint/parser": "^5.49.0",
+    "terser": "^5.16.1",
     "vite-config-builder": "^0.0.1",
     "vite-plugin-dts": "^1.7.1",
     "vite-tsconfig-paths": "^4.0.5"

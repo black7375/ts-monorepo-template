@@ -10,7 +10,7 @@ export function UserConfigBuilder(viteConfigEnv, initConfigs) {
   const configs = initConfigBuilder(viteConfigEnv, initConfigs);
   configs.add({
     build: {
-      // https://vitejs.dev/config/#build-lib
+      // https://vitejs.dev/guide/build.html#library-mode
       lib: {
         entry: resolve(process.cwd(), "src/index.ts"),
         formats: ["es", "cjs"],
@@ -27,10 +27,7 @@ export function UserConfigBuilder(viteConfigEnv, initConfigs) {
         sourcemap: true,
         minify: false,
         rollupOptions: {
-          treeshake: false,
-          output: {
-            preserveModules: true,
-          }
+          treeshake: false
         }
       }
     });
