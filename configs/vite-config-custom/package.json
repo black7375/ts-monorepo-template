@@ -8,9 +8,9 @@
   "license": "MIT",
   "devDependencies": {
     "@mprt/rollup-plugin-incremental": "^0.1.0",
-    "@typescript-eslint/parser": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.2",
     "terser": "^5.17.1",
-    "vite-config-builder": "^0.0.1",
+    "vite-config-builder": "^0.0.2",
     "vite-plugin-dts": "^2.3.0",
     "vite-tsconfig-paths": "^4.2.0"
   },
