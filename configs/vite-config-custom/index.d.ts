@@ -1,9 +1,13 @@
-import type { PluginBuilder } from "vite-config-builder";
 import type { ConfigEnv, mergeConfig } from "vite";
+import type { defineConfig } from "vitest/config";
 
-export declare function UserConfig(
+type TInputConfig = Parameters<typeof defineConfig>;
+type TOutputConfig = ReturnType<typeof mergeConfig>;
+
+declare function UserConfig(
   viteConfigEnv: ConfigEnv,
-  initConfigs?: Parameters<typeof mergeConfig>[1]
-): ReturnType<typeof mergeConfig>;
-export { initConfigBuilder as UserConfigBuilder } from "vite-config-builder";
-export declare function UserPluginBuilder(): PluginBuilder;
+  extendConfigs?: TInputConfig = {}
+): TOutputConfig;
+
+export type NodeConfig = typeof UserConfig;
+export type ReactConfig = typeof UserConfig;

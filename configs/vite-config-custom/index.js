@@ -2,19 +2,37 @@ import { resolve } from "path";
 import { initConfigBuilder, ViteEnv, PluginBuilder } from "vite-config-builder";
 import { mergeConfig } from "vite";
 
-import dts from "vite-plugin-dts";
 import tsconfigPaths from "vite-tsconfig-paths";
 import incremental from "@mprt/rollup-plugin-incremental";
+import react from "@vitejs/plugin-react";
+import dts from "vite-plugin-dts";
 
-// == Config ==================================================================
-export function UserConfig(viteConfigEnv, initConfigs = {}) {
-  return mergeConfig({
-    ...UserConfigBuilder(viteConfigEnv).build()
-  }, initConfigs);
+// == Main Configs ============================================================
+export function NodeConfig(viteConfigEnv, extendConfigs = {}) {
+  return buildConfig(viteConfigEnv, extendConfigs, NodeBuilder);
 }
 
-export function UserConfigBuilder(viteConfigEnv, initConfigs) {
-  const configs = initConfigBuilder(viteConfigEnv, initConfigs);
+export function ReactConfig(viteConfigEnv, extendConfigs = {}) {
+  return buildConfig(viteConfigEnv, extendConfigs, ReactBuilder);
+}
+
+function buildConfig(viteConfigEnv, extendConfigs, configBuilder) {
+  return mergeConfig({
+    ...configBuilder(viteConfigEnv).build()
+  }, extendConfigs);
+}
+
+// == Main Configs ============================================================
+function NodeBuilder(viteConfigEnv) {
+  const { configs, plugins } = initCommonBuilder(viteConfigEnv);
+
+  if (ViteEnv.isDev()) {
+    plugins.add(incremental());
+  }
+  if (ViteEnv.isProd()) {
+    plugins.add(dts());
+  }
+
   configs.add({
     build: {
       // https://vitejs.dev/guide/build.html#library-mode
@@ -25,8 +43,23 @@ export function UserConfigBuilder(viteConfigEnv, initConfigs) {
       },
       target: [ "es2020" ]
     },
-    plugins: UserPluginBuilder().build()
+    plugins: plugins.build()
   });
+  return configs;
+}
+
+function ReactBuilder(viteConfigEnv) {
+  const { configs, plugins } = initCommonBuilder(viteConfigEnv);
+
+  plugins.add(react());
+  configs.add({
+    plugins: plugins.build()
+  });
+  return configs;
+}
+
+function initCommonBuilder(viteConfigEnv) {
+  const configs = initConfigBuilder(viteConfigEnv);
 
   if (ViteEnv.isDev()) {
     configs.add({
@@ -39,6 +72,7 @@ export function UserConfigBuilder(viteConfigEnv, initConfigs) {
       }
     });
   }
+
   if (ViteEnv.isProd()) {
     configs.add({
       build: {
@@ -47,10 +81,11 @@ export function UserConfigBuilder(viteConfigEnv, initConfigs) {
       }
     });
   }
+
   if (ViteEnv.isTest()) {
     configs.add({
       test: {
-        includeSource: ["src/**/*.ts"],
+        includeSource: ["src/**/*.ts", "src/**/*.tsx"],
         globals: true
       }
     });
@@ -61,19 +96,13 @@ export function UserConfigBuilder(viteConfigEnv, initConfigs) {
       }
     });
   }
-  return configs;
-}
 
-// == Plugin ==================================================================
-export function UserPluginBuilder() {
-  const options = new PluginBuilder([
+  const plugins = new PluginBuilder([
     tsconfigPaths()
   ]);
-  if (ViteEnv.isDev()) {
-    options.add(incremental())
-  }
-  if (ViteEnv.isProd()) {
-    options.add(dts());
-  }
-  return options;
+
+  return {
+    configs,
+    plugins
+  };
 }

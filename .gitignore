@@ -78,6 +78,7 @@ typings/
 .env.development.local
 .env.test.local
 .env.production.local
+*.local
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -90,6 +91,7 @@ build
 # Nuxt.js build / generate output
 .nuxt
 dist
+dist-ssr
 
 # Gatsby files
 .cache/
@@ -125,6 +127,14 @@ dist
 # Turborepo
 .turbo
 
-# misc
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 *.pem

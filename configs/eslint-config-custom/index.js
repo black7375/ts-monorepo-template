@@ -3,6 +3,7 @@ const { defineConfig } = require('eslint-define-config');
 module.exports = defineConfig({
   $schema: "https://json.schemastore.org/eslintrc.json",
   parser: "@typescript-eslint/parser",
+  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   plugins: [
     "@typescript-eslint",
     "prettier"
