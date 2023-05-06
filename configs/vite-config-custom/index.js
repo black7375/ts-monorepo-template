@@ -1,11 +1,18 @@
 import { resolve } from "path";
 import { initConfigBuilder, ViteEnv, PluginBuilder } from "vite-config-builder";
+import { mergeConfig } from "vite";
 
 import dts from "vite-plugin-dts";
 import tsconfigPaths from "vite-tsconfig-paths";
 import incremental from "@mprt/rollup-plugin-incremental";
 
 // == Config ==================================================================
+export function UserConfig(viteConfigEnv, initConfigs = {}) {
+  return mergeConfig({
+    ...UserConfigBuilder(viteConfigEnv).build()
+  }, initConfigs);
+}
+
 export function UserConfigBuilder(viteConfigEnv, initConfigs) {
   const configs = initConfigBuilder(viteConfigEnv, initConfigs);
   configs.add({
