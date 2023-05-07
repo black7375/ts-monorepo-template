@@ -1,6 +1,7 @@
 import { resolve } from "path";
 import { initConfigBuilder, ViteEnv, PluginBuilder } from "vite-config-builder";
 import { mergeConfig } from "vite";
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 
 import tsconfigPaths from "vite-tsconfig-paths";
 import incremental from "@mprt/rollup-plugin-incremental";
@@ -52,6 +53,7 @@ function ReactBuilder(viteConfigEnv) {
   const { configs, plugins } = initCommonBuilder(viteConfigEnv);
 
   plugins.add(react());
+  plugins.add(vanillaExtractPlugin());
   configs.add({
     plugins: plugins.build()
   });

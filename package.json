@@ -48,6 +48,7 @@
     "vitest": "^0.31.0"
   },
   "dependencies": {
+    "@vanilla-extract/css": "^1.11.0",
     "tslib": "^2.5.0"
   }
 }
