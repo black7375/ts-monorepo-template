@@ -4175,6 +4175,7 @@ __metadata:
     "@types/react-dom": ^18.0.11
     "@vitejs/plugin-react": ^4.0.0
     eslint-config-react: "workspace:^"
+    prettier-config-custom: "workspace:^"
     react: ^18.2.0
     react-dom: ^18.2.0
     tsconfig-custom: "workspace:^"

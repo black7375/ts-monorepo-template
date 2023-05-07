@@ -5,5 +5,5 @@ module.exports = {
   "tabWidth": 2,
   "semi": true,
   "bracketSpacing": true,
-  "arrowParens": "avoid"
+  "arrowParens": "always"
 }
