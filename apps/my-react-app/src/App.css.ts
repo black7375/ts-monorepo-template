@@ -32,10 +32,8 @@ export const logo = style({
 export const logoReact = style([
   logo,
   {
-    selectors: {
-      "&:hover": {
-        filter: "drop-shadow(0 0 2em #61dafbaa)"
-      }
+    ":hover": {
+      filter: "drop-shadow(0 0 2em #61dafbaa)"
     }
   }
 ]);
