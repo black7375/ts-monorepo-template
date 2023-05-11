@@ -11,7 +11,8 @@ module.exports = defineConfig({
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:jsx-a11y/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:storybook/recommended"
   ],
   rules: {
     "react-refresh/only-export-components": "warn",

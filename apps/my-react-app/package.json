@@ -12,17 +12,14 @@
     "build:watch": "yarn run build --watch",
     "lint": "yarn run -T eslint . --report-unused-disable-directives --max-warnings 0",
     "fix": "yarn run lint --fix",
-    "check": "yarn run -T tsc --noEmit"
+    "check": "yarn run -T tsc --noEmit",
+    "storybook": "yarn run -T storybook dev -p 6006",
+    "build-storybook": "yarn run -T storybook build"
   },
   "prettier": "prettier-config-custom",
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
   "devDependencies": {
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
     "eslint-config-react": "workspace:^",
+    "eslint-plugin-storybook": "^0.6.12",
     "prettier-config-custom": "workspace:^",
     "tsconfig-custom": "workspace:^",
     "vite-config-custom": "workspace:^"
