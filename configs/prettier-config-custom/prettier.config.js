@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "$schema": "https://json.schemastore.org/prettierrc",
   "parser": "typescript",
   "trailingComma": "none",
