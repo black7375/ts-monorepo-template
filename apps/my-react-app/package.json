@@ -4,17 +4,17 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "clean": "yarn run -T rimraf dist coverage .turbo tsconfig.tsbuildinfo node_modules/.vite",
-    "start": "yarn run -T vite",
-    "preview": "yarn run -T vite preview",
-    "build": "yarn run -T vite build",
-    "build:release": "yarn run -T vite build",
-    "build:watch": "yarn run build --watch",
-    "lint": "yarn run -T eslint . --report-unused-disable-directives --max-warnings 0",
-    "fix": "yarn run lint --fix",
-    "check": "yarn run -T tsc --noEmit",
-    "storybook": "yarn run -T storybook dev -p 6006",
-    "build-storybook": "yarn run -T storybook build"
+    "clean": "yarn g:clean",
+    "start": "yarn g:app-start",
+    "preview": "yarn g:app-preview",
+    "build": "yarn g:build",
+    "build:release": "yarn g:build-release",
+    "build:watch": "yarn g:build-watch",
+    "lint": "yarn g:lint",
+    "fix": "yarn g:lint --fix",
+    "check": "yarn g:check",
+    "storybook": "yarn g:storybook",
+    "build-storybook": "yarn g:build-storybook"
   },
   "prettier": "prettier-config-custom",
   "devDependencies": {

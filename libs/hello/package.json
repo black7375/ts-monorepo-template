@@ -17,17 +17,17 @@
   ],
   "prettier": "prettier-config-custom",
   "scripts": {
-    "clean": "yarn run -T rimraf dist coverage .turbo tsconfig.tsbuildinfo node_modules/.vite",
-    "start": "node ./dist/index.mjs",
-    "build": "yarn run -T vite build --mode=development",
-    "build:release": "yarn run -T vite build",
-    "build:watch": "yarn run build --watch",
-    "test": "yarn run -T vitest run",
-    "test:watch": "yarn run -T vitest",
-    "coverage": "yarn run test --coverage",
-    "lint": "yarn run -T esprint check .",
-    "fix": "yarn run lint --fix",
-    "check": "yarn run -T tsc --noEmit"
+    "clean": "yarn g:clean",
+    "start": "yarn g:cli-start",
+    "build": "yarn g:build",
+    "build:release": "yarn g:build-release",
+    "build:watch": "yarn g:build-watch",
+    "test": "yarn g:test",
+    "test:watch": "yarn g:test-watch",
+    "coverage": "yarn g:coverage",
+    "lint": "yarn g:lint",
+    "fix": "yarn g:fix",
+    "check": "yarn g:check"
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:^",

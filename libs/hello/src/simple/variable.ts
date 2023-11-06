@@ -1,6 +1,6 @@
 export const boolVal = true;
 export const nullVal = null;
-export let numVal  = 10;
+export let numVal = 10;
 
 export const obj = {
   name: "Kim",
@@ -25,7 +25,7 @@ export const objWithFn = {
   setName(name: typeof this.name) {
     this.name = name;
   }
-}
+};
 
 // in-source test suites
 if (import.meta.vitest) {
@@ -87,7 +87,7 @@ if (import.meta.vitest) {
     spyOn(objWithFn, "setName");
     objWithFn.setName("Lee");
     const name = objWithFn.getName();
-    
+
     expect(objWithFn.setName).toHaveBeenCalledWith("Lee");
     expect(objWithFn.getName).toHaveBeenCalled();
     expect(name).toBe("Lee");

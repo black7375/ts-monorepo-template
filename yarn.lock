@@ -5,7 +5,7 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@ampproject/remapping@npm:^2.2.0":
+"@ampproject/remapping@npm:^2.2.0, @ampproject/remapping@npm:^2.2.1":
   version: 2.2.1
   resolution: "@ampproject/remapping@npm:2.2.1"
   dependencies:
@@ -4224,6 +4224,21 @@ __metadata:
   peerDependencies:
     vite: ^4.2.0
   checksum: 575298f66517c51348892d49b302490c48e15c9ddb0b2c5f710931804e559dceafca1be1e62cb72d0902cba5f3c98e4b1272970d328e3a62d59ecdf976e68d3d
+  languageName: node
+  linkType: hard
+
+"@vitest/coverage-c8@npm:^0.31.3":
+  version: 0.31.4
+  resolution: "@vitest/coverage-c8@npm:0.31.4"
+  dependencies:
+    "@ampproject/remapping": ^2.2.1
+    c8: ^7.13.0
+    magic-string: ^0.30.0
+    picocolors: ^1.0.0
+    std-env: ^3.3.2
+  peerDependencies:
+    vitest: ">=0.30.0 <1"
+  checksum: 81a462adf47456b46a6a71d868dc0654fff2f6d4d685877145fc966d8ec8508e4ebb1ae90f62f2903d449b5a7cdf8d76e7dc6b0f117921787a629fb727dd974a
   languageName: node
   linkType: hard
 
@@ -11507,6 +11522,7 @@ __metadata:
     "@types/rimraf": ^4.0.5
     "@typescript-eslint/eslint-plugin": ^5.59.2
     "@vanilla-extract/css": ^1.11.0
+    "@vitest/coverage-c8": ^0.31.3
     c8: ^7.13.0
     eslint: ^8.40.0
     eslint-config-prettier: ^8.8.0
