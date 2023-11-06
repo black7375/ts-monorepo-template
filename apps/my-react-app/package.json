@@ -19,7 +19,7 @@
   "prettier": "prettier-config-custom",
   "devDependencies": {
     "eslint-config-react": "workspace:^",
-    "eslint-plugin-storybook": "^0.6.12",
+    "eslint-plugin-storybook": "^0.6.15",
     "prettier-config-custom": "workspace:^",
     "tsconfig-custom": "workspace:^",
     "vite-config-custom": "workspace:^"

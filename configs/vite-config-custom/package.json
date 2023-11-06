@@ -8,13 +8,13 @@
   "license": "MIT",
   "devDependencies": {
     "@mprt/rollup-plugin-incremental": "^0.1.0",
-    "@typescript-eslint/parser": "^5.59.2",
-    "@vanilla-extract/vite-plugin": "^3.8.0",
-    "@vitejs/plugin-react": "^4.0.0",
-    "terser": "^5.17.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "@vanilla-extract/vite-plugin": "^3.9.0",
+    "@vitejs/plugin-react": "^4.1.1",
+    "terser": "^5.24.0",
     "vite-config-builder": "^0.0.2",
-    "vite-plugin-dts": "^2.3.0",
-    "vite-tsconfig-paths": "^4.2.0"
+    "vite-plugin-dts": "^3.6.3",
+    "vite-tsconfig-paths": "^4.2.1"
   },
   "peerDependencies": {
     "vite": "*",
