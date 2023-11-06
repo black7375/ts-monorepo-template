@@ -39,7 +39,7 @@
       "libs/*"
     ]
   },
-  "packageManager": "yarn@3.5.1",
+  "packageManager": "yarn@3.6.4",
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.2",
     "@storybook/addon-interactions": "^7.5.2",
